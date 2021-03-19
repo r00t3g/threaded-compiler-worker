@@ -1,6 +1,6 @@
 {
     "name": "threaded-compiler-worker",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Worker package for threaded compiler, required for proper support in isopack",
     "main": "index.js",
     "repository": {
@@ -12,5 +12,8 @@
     "bugs": {
         "url": "https://github.com/r00t3g/threaded-compiler-worker/issues"
     },
-    "homepage": "https://github.com/r00t3g/threaded-compiler-worker#readme"
+    "homepage": "https://github.com/r00t3g/threaded-compiler-worker#readme",
+    "dependencies": {
+        "deepmerge": "^4.2.2"
+    }
 }

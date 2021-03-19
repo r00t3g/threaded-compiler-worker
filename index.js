@@ -1,5 +1,6 @@
 const { parentPort } = require('worker_threads');
 
+const deepmerge = require('deepmerge');
 const MeteorBabel = require('meteor-babel');
 
 const babel = {
@@ -19,9 +20,11 @@ const babel = {
 };
 
 function compile ({ source, features, babelOptions, cacheOptions }) {
-    const { code, map } = babel.compile(source,
-        { ...babel.getDefaultOptions(features), ...babelOptions },
-        cacheOptions);
+    const { code, map } = babel.compile(
+        source,
+        deepmerge(babel.getDefaultOptions(features), babelOptions),
+        cacheOptions
+    );
 
     parentPort.postMessage({ code, map });
 }
