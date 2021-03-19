@@ -1,0 +1,16 @@
+{
+    "name": "threaded-compiler-worker",
+    "version": "0.1.0",
+    "description": "Worker package for threaded compiler, required for proper support in isopack",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/r00t3g/threaded-compiler-worker.git"
+    },
+    "author": "r00t3g Daven",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/r00t3g/threaded-compiler-worker/issues"
+    },
+    "homepage": "https://github.com/r00t3g/threaded-compiler-worker#readme"
+}
