@@ -1,6 +1,6 @@
 {
     "name": "threaded-compiler-worker",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Worker package for threaded compiler, required for proper support in isopack",
     "main": "index.js",
     "repository": {
