@@ -12,5 +12,8 @@
     "bugs": {
         "url": "https://github.com/r00t3g/threaded-compiler-worker/issues"
     },
-    "homepage": "https://github.com/r00t3g/threaded-compiler-worker#readme"
+    "homepage": "https://github.com/r00t3g/threaded-compiler-worker#readme",
+    "dependencies": {
+        "deepmerge": "^4.2.2"
+    }
 }
