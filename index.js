@@ -18,9 +18,17 @@ const babel = {
     getMinimumModernBrowserVersions: () => require('meteor-babel/modern-versions.js').get(),
 };
 
-function compile ({ source, babelOptions, cacheOptions }) {
-    parentPort.postMessage(babel.compile(source, babelOptions, cacheOptions));
+function compile ({ source, features, babelOptions, cacheOptions }) {
+    const { code, map } = babel.compile(source,
+        { ...babel.getDefaultOptions(features), ...babelOptions },
+        cacheOptions);
+
+    parentPort.postMessage({ code, map });
 }
 
-parentPort.on('message', compile);
-parentPort.postMessage('ready');
+if (parentPort) {
+    parentPort.on('message', compile);
+    parentPort.postMessage('ready');
+}
+
+module.exports = { path: __filename };
